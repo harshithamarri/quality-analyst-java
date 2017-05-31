@@ -1,15 +1,18 @@
-package arrays;
+package exceptionhandling;
 
 public class Test {
 
-	public static void main(String[] args) {
+	public static void main(String[] args)  {
 		// TODO Auto-generated method stub
 		
-		String student1 = "Rakesh";
-		String student2 = "Raju";
-		
-		System.out.println(student1);
-		System.out.println(student2);
+		System.out.println("Hi");
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println("Hello");
 
 	}
 

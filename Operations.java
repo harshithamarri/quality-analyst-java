@@ -1,20 +1,39 @@
+package exceptionhandling;
 
 public class Operations {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Operations obj=new Operations();
-		obj.add(100, 200);//method call
-		obj.add(300, 00);//method call
+		int x = 100;
+		int y = 10;
+		
+		try{
+		int z = x/y;
+		
+		System.out.println(z);
+		}
+		
+		catch(Exception e)
+		{
+			System.out.println("Exception handled");
+			System.out.println(e);
+		 System.out.println(e.getMessage());
+		
+		}
+		
+		finally
+		{
+			System.out.println("ALways executes");
+		}
+		
+		
+		System.out.println("Exception occured");
 	
-	
-	}
-	
-	public void add(int a, int b)
-	{
-	int c = a+b;
-	System.out.println(c);
+		
+		
+		
+
 	}
 
 }
