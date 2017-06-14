@@ -10,13 +10,16 @@ import org.testng.annotations.Test;
 
 public class PricelineSlidertest 
 {
-			
-	WebDriver firefox=new FirefoxDriver();
-
+	
+	WebDriver firefox;//=null;
+	
 	@Test(priority=1)
 	public void openBrowser() throws InterruptedException
+	
 	{
 		
+		System.setProperty("webdriver.gecko.driver","D:\\drivers\\geckodriver.exe");
+		firefox=new FirefoxDriver();
 	firefox.get("https://www.priceline.com/home/");
 		
 	Thread.sleep(2000);
@@ -40,6 +43,8 @@ public class PricelineSlidertest
 		Thread.sleep(2000);
 		
 	firefox.findElement(By.xpath(".//*[@id='search-products']/div/div[1]/button[5]")).click();
+	
+	
 
 	}
 	}
